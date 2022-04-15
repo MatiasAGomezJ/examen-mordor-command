@@ -14,16 +14,16 @@ import java.util.Set;
 
 import org.junit.jupiter.api.Test;
 import edu.poniperro.mordor.interfaces.Pedido;
-//import edu.poniperro.mordor.interfaces.PedidoPeligroso;
+import edu.poniperro.mordor.interfaces.PedidoPeligroso;
 //import edu.poniperro.mordor.interfaces.Procesador;
 import edu.poniperro.mordor.interfaces.TratamientoPedido;
 import edu.poniperro.mordor.pedidos.PedidoInternacional;
 //import edu.poniperro.mordor.pedidos.PedidoNacional;
-//import edu.poniperro.mordor.pedidos.PedidoPeligrosoOrden;
+import edu.poniperro.mordor.pedidos.PedidoPeligrosoOrden;
 //import edu.poniperro.mordor.procesadores.Oficina;
 import edu.poniperro.mordor.tratamientos.TratamientoPedidoInternacional;
 //import edu.poniperro.mordor.tratamientos.TratamientoPedidoMultiple;
-//import edu.poniperro.mordor.tratamientos.TratamientoPedidoPeligroso;
+import edu.poniperro.mordor.tratamientos.TratamientoPedidoPeligroso;
 
 /**
  * NO PUEDES MODIFICAR EL CODIGO DE LOS CASOS TEST
@@ -75,30 +75,30 @@ public class TestPedidos {
      * Crea las clases necesarias que se requieren en los casos test
      * respetando los constructores que se exigen.
      */
-//    @Test
-//    public void test_pedido_peligroso_KO() {
-//
-//        Pedido pedidoConPeligro = new PedidoPeligrosoOrden("Monte del destino",
-//                "No ponerselo en el dedo");
-//        assertEquals("Monte del destino", pedidoConPeligro.destino());
-//
-//        TratamientoPedido tratamientoKO = new TratamientoPedidoPeligroso(
-//                (PedidoPeligroso) pedidoConPeligro);
-//        assertNotNull(tratamientoKO);
-//        assertFalse(tratamientoKO.tratar());
-//    }
+    @Test
+    public void test_pedido_peligroso_KO() {
 
-//    @Test
-//    public void test_pedido_peligroso_OK() {
-//
-//        Pedido pedidoConPeligro = new PedidoPeligrosoOrden("Cima de los vientos",
-//                "No urgarse en las uñas con este puñal");
-//        assertEquals("Cima de los vientos", pedidoConPeligro.destino());
-//
-//        TratamientoPedido tratamientoOK = new TratamientoPedidoPeligroso(
-//                (PedidoPeligroso) pedidoConPeligro);
-//        assertTrue(tratamientoOK.tratar());
-//    }
+        Pedido pedidoConPeligro = new PedidoPeligrosoOrden("Monte del destino",
+                "No ponerselo en el dedo");
+        assertEquals("Monte del destino", pedidoConPeligro.destino());
+
+        TratamientoPedido tratamientoKO = new TratamientoPedidoPeligroso(
+                (PedidoPeligroso) pedidoConPeligro);
+        assertNotNull(tratamientoKO);
+        assertFalse(tratamientoKO.tratar());
+    }
+
+    @Test
+    public void test_pedido_peligroso_OK() {
+
+        Pedido pedidoConPeligro = new PedidoPeligrosoOrden("Cima de los vientos",
+                "No urgarse en las uñas con este puñal");
+        assertEquals("Cima de los vientos", pedidoConPeligro.destino());
+
+        TratamientoPedido tratamientoOK = new TratamientoPedidoPeligroso(
+                (PedidoPeligroso) pedidoConPeligro);
+        assertTrue(tratamientoOK.tratar());
+    }
 
     /**
      * Añade a las clases PedidoInternacional y PedidoPeligrosoOrden

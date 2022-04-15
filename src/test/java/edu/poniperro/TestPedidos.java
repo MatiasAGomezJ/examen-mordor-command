@@ -15,12 +15,12 @@ import java.util.Set;
 import org.junit.jupiter.api.Test;
 import edu.poniperro.mordor.interfaces.Pedido;
 import edu.poniperro.mordor.interfaces.PedidoPeligroso;
-//import edu.poniperro.mordor.interfaces.Procesador;
+import edu.poniperro.mordor.interfaces.Procesador;
 import edu.poniperro.mordor.interfaces.TratamientoPedido;
 import edu.poniperro.mordor.pedidos.PedidoInternacional;
 import edu.poniperro.mordor.pedidos.PedidoNacional;
 import edu.poniperro.mordor.pedidos.PedidoPeligrosoOrden;
-//import edu.poniperro.mordor.procesadores.Oficina;
+import edu.poniperro.mordor.procesadores.Oficina;
 import edu.poniperro.mordor.tratamientos.TratamientoPedidoInternacional;
 //import edu.poniperro.mordor.tratamientos.TratamientoPedidoMultiple;
 import edu.poniperro.mordor.tratamientos.TratamientoPedidoPeligroso;
@@ -140,19 +140,19 @@ public class TestPedidos {
      * tipo de pedido
      */
 
-//    @Test
-//    public void test_interface_procesador() {
-//
-//        Procesador correos = new Oficina();
-//        TratamientoPedido pedidoInt = new TratamientoPedidoInternacional(
-//                new PedidoInternacional("Comarca", 100));
-//        assertTrue(correos.procesa(pedidoInt));
-//
-//        TratamientoPedido pedidoConPeligro = new TratamientoPedidoPeligroso(
-//                new PedidoPeligrosoOrden("Cima de los vientos",
-//                        "No urgarse en las uñas con este puñal"));
-//        assertTrue(correos.procesa(pedidoConPeligro));
-//    }
+    @Test
+    public void test_interface_procesador() {
+
+        Procesador correos = new Oficina();
+        TratamientoPedido pedidoInt = new TratamientoPedidoInternacional(
+                new PedidoInternacional("Comarca", 100));
+        assertTrue(correos.procesa(pedidoInt));
+
+        TratamientoPedido pedidoConPeligro = new TratamientoPedidoPeligroso(
+                new PedidoPeligrosoOrden("Cima de los vientos",
+                        "No urgarse en las uñas con este puñal"));
+        assertTrue(correos.procesa(pedidoConPeligro));
+    }
 
     /**
      * La oficina puede enviar un mensaje que informe del
@@ -162,27 +162,27 @@ public class TestPedidos {
      * ACEPTADO y RECHAZADO.
      */
 
-//    @Test
-//    public void test_printar_status() {
-//
-//        Oficina correos = new Oficina();
-//        PedidoInternacional toComarcaWithLove = new PedidoInternacional("Comarca", 100);
-//        TratamientoPedido pedidoInt = new TratamientoPedidoInternacional(toComarcaWithLove);
-//
-//        assertTrue(correos.procesa(pedidoInt));
-//        assertEquals("Comarca ACEPTADO", correos.printarStatus(
-//                correos.procesa(pedidoInt), toComarcaWithLove));
-//
-//        PedidoPeligroso pedidoConPeligro = new PedidoPeligrosoOrden("Monte del destino",
-//                "No ponerselo en el dedo");
-//        TratamientoPedido tratamientoKO = new TratamientoPedidoPeligroso(pedidoConPeligro);
-//
-//        assertFalse(correos.procesa(tratamientoKO));
-//        assertEquals("Monte del destino RECHAZADO", correos.printarStatus(
-//                correos.procesa(tratamientoKO),
-//                pedidoConPeligro));
-//
-//    }
+    @Test
+    public void test_printar_status() {
+
+        Oficina correos = new Oficina();
+        PedidoInternacional toComarcaWithLove = new PedidoInternacional("Comarca", 100);
+        TratamientoPedido pedidoInt = new TratamientoPedidoInternacional(toComarcaWithLove);
+
+        assertTrue(correos.procesa(pedidoInt));
+        assertEquals("Comarca ACEPTADO", correos.printarStatus(
+                correos.procesa(pedidoInt), toComarcaWithLove));
+
+        PedidoPeligroso pedidoConPeligro = new PedidoPeligrosoOrden("Monte del destino",
+                "No ponerselo en el dedo");
+        TratamientoPedido tratamientoKO = new TratamientoPedidoPeligroso(pedidoConPeligro);
+
+        assertFalse(correos.procesa(tratamientoKO));
+        assertEquals("Monte del destino RECHAZADO", correos.printarStatus(
+                correos.procesa(tratamientoKO),
+                pedidoConPeligro));
+
+    }
 
     /**
      * Crea una clase TratamientoPedidoMultiple que permita tratar

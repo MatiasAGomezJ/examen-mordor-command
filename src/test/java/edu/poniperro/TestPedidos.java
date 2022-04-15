@@ -106,17 +106,17 @@ public class TestPedidos {
      * autogenerado haciendo uso de la clase UUID de Java
      * https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html
      */
-//    @Test
-//    public void test_UUID_generator() {
-//
-//        PedidoInternacional internacional = new PedidoInternacional("Mordor", 10);
-//        PedidoPeligrosoOrden peligroso = new PedidoPeligrosoOrden("Cima de los vientos",
-//                "No urgarse en las uñas con este puñal");
-//        assertNotNull(internacional.getId());
-//        assertNotNull(peligroso.getId());
-//
-//        assertNotEquals(internacional.getId(), peligroso.getId());
-//    }
+    @Test
+    public void test_UUID_generator() {
+
+        PedidoInternacional internacional = new PedidoInternacional("Mordor", 10);
+        PedidoPeligrosoOrden peligroso = new PedidoPeligrosoOrden("Cima de los vientos",
+                "No urgarse en las uñas con este puñal");
+        assertNotNull(internacional.getId());
+        assertNotNull(peligroso.getId());
+
+        assertNotEquals(internacional.getId(), peligroso.getId());
+    }
 
     /**
      * Añade una clase para los pedidos nacionales.

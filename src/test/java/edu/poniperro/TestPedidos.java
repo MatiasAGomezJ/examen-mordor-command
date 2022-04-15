@@ -12,16 +12,16 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-//import org.junit.jupiter.api.Test;
-//import edu.poniperro.mordor.interfaces.Pedido;
+import org.junit.jupiter.api.Test;
+import edu.poniperro.mordor.interfaces.Pedido;
 //import edu.poniperro.mordor.interfaces.PedidoPeligroso;
 //import edu.poniperro.mordor.interfaces.Procesador;
-//import edu.poniperro.mordor.interfaces.TratamientoPedido;
-//import edu.poniperro.mordor.pedidos.PedidoInternacional;
+import edu.poniperro.mordor.interfaces.TratamientoPedido;
+import edu.poniperro.mordor.pedidos.PedidoInternacional;
 //import edu.poniperro.mordor.pedidos.PedidoNacional;
 //import edu.poniperro.mordor.pedidos.PedidoPeligrosoOrden;
 //import edu.poniperro.mordor.procesadores.Oficina;
-//import edu.poniperro.mordor.tratamientos.TratamientoPedidoInternacional;
+import edu.poniperro.mordor.tratamientos.TratamientoPedidoInternacional;
 //import edu.poniperro.mordor.tratamientos.TratamientoPedidoMultiple;
 //import edu.poniperro.mordor.tratamientos.TratamientoPedidoPeligroso;
 
@@ -40,29 +40,29 @@ public class TestPedidos {
      * Crea las clases necesarias que se requieren en los casos test
      * respetando los constructores que se exigen.
      */
-//    @Test
-//    public void test_Mordor() {
-//
-//        Pedido pedidoInt = new PedidoInternacional("Mordor", 100);
-//        assertEquals("Mordor", pedidoInt.destino());
-//
-//        TratamientoPedido tratamientoKO = new TratamientoPedidoInternacional(
-//                (PedidoInternacional) pedidoInt);
-//        assertNotNull(tratamientoKO);
-//        assertFalse(tratamientoKO.tratar());
-//    }
+    @Test
+    public void test_Mordor() {
 
-//    @Test
-//    public void test_Comarca() {
-//
-//        Pedido pedidoInt = new PedidoInternacional("Comarca", 100);
-//        assertEquals("Comarca", pedidoInt.destino());
-//
-//        TratamientoPedido tratamientoOK = new TratamientoPedidoInternacional(
-//                (PedidoInternacional) pedidoInt);
-//        assertNotNull(tratamientoOK);
-//        assertTrue(tratamientoOK.tratar());
-//    }
+        Pedido pedidoInt = new PedidoInternacional("Mordor", 100);
+        assertEquals("Mordor", pedidoInt.destino());
+
+        TratamientoPedido tratamientoKO = new TratamientoPedidoInternacional(
+                (PedidoInternacional) pedidoInt);
+        assertNotNull(tratamientoKO);
+        assertFalse(tratamientoKO.tratar());
+    }
+
+    @Test
+    public void test_Comarca() {
+
+        Pedido pedidoInt = new PedidoInternacional("Comarca", 100);
+        assertEquals("Comarca", pedidoInt.destino());
+
+        TratamientoPedido tratamientoOK = new TratamientoPedidoInternacional(
+                (PedidoInternacional) pedidoInt);
+        assertNotNull(tratamientoOK);
+        assertTrue(tratamientoOK.tratar());
+    }
 
     /**
      * Crea una clase TratamientoPedidoPeligroso que permita tratar

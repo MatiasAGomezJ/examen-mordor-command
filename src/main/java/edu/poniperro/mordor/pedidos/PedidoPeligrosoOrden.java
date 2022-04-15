@@ -2,9 +2,11 @@ package edu.poniperro.mordor.pedidos;
 
 import edu.poniperro.mordor.interfaces.PedidoPeligroso;
 
+import java.util.UUID;
+
 public class PedidoPeligrosoOrden implements PedidoPeligroso {
 
-    private final String id = "1";
+    private final String id = UUID.randomUUID().toString();
     private String destino;
     private int peso;
     private String instrucciones;

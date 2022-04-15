@@ -2,8 +2,10 @@ package edu.poniperro.mordor.pedidos;
 
 import edu.poniperro.mordor.interfaces.Pedido;
 
+import java.util.UUID;
+
 public class PedidoInternacional implements Pedido {
-    private final String id = "1";
+    private final String id = UUID.randomUUID().toString();
     private String destino;
     private int peso;
 

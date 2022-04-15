@@ -1,13 +1,81 @@
 package edu.poniperro.mordor;
 
+//import edu.poniperro.mordor.interfaces.Pedido;
+//import edu.poniperro.mordor.interfaces.PedidoPeligroso;
+//import edu.poniperro.mordor.interfaces.TratamientoPedido;
+//import edu.poniperro.mordor.pedidos.PedidoInternacional;
+//import edu.poniperro.mordor.pedidos.PedidoPeligrosoOrden;
+//import edu.poniperro.mordor.procesadores.Oficina;
+//import edu.poniperro.mordor.tratamientos.TratamientoPedidoInternacional;
+//import edu.poniperro.mordor.tratamientos.TratamientoPedidoPeligroso;
+
 /**
- * Hello world!
+ * Crea una oficina que procesa pedidos.
  *
+ * En funcion de si el tratamiento del pedido es posible o no
+ * la oficina procesa el pedido (true /false)
+ * e informa de su estado (aceptado /rechazado).
+ *
+ * Como los pedidos pueden ser de multiples tipos,
+ * muchos de ellos aun desconocidos y cada uno
+ * con sus particularidades propias,
+ * vamos a usar el patron COMMAND.
+ *
+ * Consulta el manual de referencia para ver un ejemplo del patron.
+ *
+ * Aplicando el patron COMMAND no procesaremos pedidos,
+ * sino que le pasaremos a la oficina /procesador
+ * el tipo de tratamiento que ha de aplicar a cada pedido,
+ * y sera el propio pedido el que decida como debe ser tratado.
+ *
+ * PASA LOS CASOS TEST PROPUESTOS y utilizalos como guia para el desarrollo.
+ * NO PUEDES MODIFICAR EL CODIGO DE LOS CASOS TEST
+ *
+ * La clase App.java contiene el MAIN y ha de funcionar.
+ * NO PUEDES MODIFICAR EL CODIGO DEL MAIN
+ *
+ * Crea un proyecto MAVEN siguiendo el esquema: org.mvpigs.commandpattern
+ * Respeta la estructura del proyecto indicada
+ * en el nombre de los paquetes que se indican en los casos test.
+ *
+ * - Realiza commits periódicamente mientras avanzas en el desarrollo de la aplicación.
+ * - Publica tu solucion en GitHub.
+ *
+ * No olvides dibujar a mano alzada el DIAGRAMA DE CLASES UML de tu solucion
+ * para completar la evaluacion de la parte practica de ED.
  */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+
+public class App {
+
+    public static void main(String[] args) {
+
+//        Oficina oficina = new Oficina();
+
+//        Pedido pedido = new PedidoInternacional("Comarca", 10);
+//        TratamientoPedido tratamientoInt = new TratamientoPedidoInternacional(
+//                (PedidoInternacional) pedido);
+
+//        System.out.println(oficina.printarStatus(oficina.procesa(tratamientoInt), pedido));
+
+//        pedido = new PedidoInternacional("Mordor", 10);
+//        tratamientoInt = new TratamientoPedidoInternacional((PedidoInternacional) pedido);
+
+//        System.out.println(oficina.printarStatus(oficina.procesa(tratamientoInt), pedido));
+
+//        pedido = new PedidoPeligrosoOrden("Cima de los vientos",
+//                "No urgarse en las uñas con este puñal");
+//        TratamientoPedido peligroso = new TratamientoPedidoPeligroso((PedidoPeligroso) pedido);
+
+//        System.out.println(oficina.printarStatus(oficina.procesa(peligroso), pedido));
+
+//        pedido = new PedidoPeligrosoOrden("Monte del destino",
+//                "No ponerselo en el dedo");
+//        peligroso = new TratamientoPedidoPeligroso((PedidoPeligroso) pedido);
+
+//        System.out.println(oficina.printarStatus(oficina.procesa(peligroso), pedido));
+
+        /**
+         * Los pedidos multiples se completan en el ultimo de los casos test
+         */
     }
 }

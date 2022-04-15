@@ -12,7 +12,7 @@ public class TratamientoPedidoInternacional implements TratamientoPedido {
     }
 
     @Override
-    public boolean tratar(){
+    public boolean tratar() {
         return pedido.destino() != "Mordor";
     }
 

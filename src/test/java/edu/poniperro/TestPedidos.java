@@ -212,7 +212,7 @@ public class TestPedidos {
         List<String> destinos = Arrays.asList("Gondor", "Minas Tirith", "Rohan");
         List<Integer> pesos = Arrays.asList(10, 10, 10);
 
-        for (int i=0; i<destinos.size(); i++) {
+        for (int i = 0; i < destinos.size(); i++) {
             pedidos.add(new PedidoNacional(destinos.get(i), pesos.get(i)));
         }
         assertEquals(3, pedidos.size());
@@ -226,11 +226,11 @@ public class TestPedidos {
          *
          * calcularTotalBultos
          * @param   void
-         * @return  void
+         * @return void
          *
          * calcularPesoTotal
          * @param   void
-         * @return  void
+         * @return void
          *
          */
 

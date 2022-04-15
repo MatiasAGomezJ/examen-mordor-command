@@ -22,7 +22,7 @@ import edu.poniperro.mordor.pedidos.PedidoNacional;
 import edu.poniperro.mordor.pedidos.PedidoPeligrosoOrden;
 import edu.poniperro.mordor.procesadores.Oficina;
 import edu.poniperro.mordor.tratamientos.TratamientoPedidoInternacional;
-//import edu.poniperro.mordor.tratamientos.TratamientoPedidoMultiple;
+import edu.poniperro.mordor.tratamientos.TratamientoPedidoMultiple;
 import edu.poniperro.mordor.tratamientos.TratamientoPedidoPeligroso;
 
 /**
@@ -198,51 +198,51 @@ public class TestPedidos {
      * respetando los constructores que se exigen.
      */
 
-//    @Test
-//    public void test_tratamiento_pedido_multiple_tratar() {
-//
-//        /**
-//         * Crea una colección de tres pedidos nacionales, a "Gondor", "Minas Tirith", "Rohan"
-//         * con un peso de 10 cada uno.
-//         *
-//         * Pasasela a TratamientoPedidosMultiple en su constructor.
-//         */
-//
-//        Set<Pedido> pedidos = new HashSet<>();
-//        List<String> destinos = Arrays.asList("Gondor", "Minas Tirith", "Rohan");
-//        List<Integer> pesos = Arrays.asList(10, 10, 10);
-//
-//        for (int i=0; i<destinos.size(); i++) {
-//            pedidos.add(new PedidoNacional(destinos.get(i), pesos.get(i)));
-//        }
-//        assertEquals(3, pedidos.size());
-//
-//        TratamientoPedidoMultiple pedidosMult = new TratamientoPedidoMultiple(pedidos);
-//        assertNotNull(pedidosMult);
-//
-//        /**
-//         * Completa los metodos del pedido multiple.
-//         * Se valorara el uso de streams.
-//         *
-//         * calcularTotalBultos
-//         * @param   void
-//         * @return  void
-//         *
-//         * calcularPesoTotal
-//         * @param   void
-//         * @return  void
-//         *
-//         */
-//
-//        pedidosMult.calcularTotalBultos();
-//        assertEquals(3, pedidosMult.getNumBultos(), 0);
-//
-//        pedidosMult.calcularPesoTotal();
-//        assertEquals(30, pedidosMult.getPesoTotal(), 0);
-//
-//        /**
-//         * Trata el pedido multiple.
-//         */
-//        assertTrue(pedidosMult.tratar());
-//    }
+    @Test
+    public void test_tratamiento_pedido_multiple_tratar() {
+
+        /**
+         * Crea una colección de tres pedidos nacionales, a "Gondor", "Minas Tirith", "Rohan"
+         * con un peso de 10 cada uno.
+         *
+         * Pasasela a TratamientoPedidosMultiple en su constructor.
+         */
+
+        Set<Pedido> pedidos = new HashSet<>();
+        List<String> destinos = Arrays.asList("Gondor", "Minas Tirith", "Rohan");
+        List<Integer> pesos = Arrays.asList(10, 10, 10);
+
+        for (int i=0; i<destinos.size(); i++) {
+            pedidos.add(new PedidoNacional(destinos.get(i), pesos.get(i)));
+        }
+        assertEquals(3, pedidos.size());
+
+        TratamientoPedidoMultiple pedidosMult = new TratamientoPedidoMultiple(pedidos);
+        assertNotNull(pedidosMult);
+
+        /**
+         * Completa los metodos del pedido multiple.
+         * Se valorara el uso de streams.
+         *
+         * calcularTotalBultos
+         * @param   void
+         * @return  void
+         *
+         * calcularPesoTotal
+         * @param   void
+         * @return  void
+         *
+         */
+
+        pedidosMult.calcularTotalBultos();
+        assertEquals(3, pedidosMult.getNumBultos(), 0);
+
+        pedidosMult.calcularPesoTotal();
+        assertEquals(30, pedidosMult.getPesoTotal(), 0);
+
+        /**
+         * Trata el pedido multiple.
+         */
+        assertTrue(pedidosMult.tratar());
+    }
 }

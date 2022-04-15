@@ -1,6 +1,6 @@
 package edu.poniperro.mordor.interfaces;
 
-public interface PedidoPeligroso {
+public interface PedidoPeligroso extends Pedido{
 
     String instrucciones();
 }

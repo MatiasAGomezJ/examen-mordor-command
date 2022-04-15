@@ -18,7 +18,7 @@ import edu.poniperro.mordor.interfaces.PedidoPeligroso;
 //import edu.poniperro.mordor.interfaces.Procesador;
 import edu.poniperro.mordor.interfaces.TratamientoPedido;
 import edu.poniperro.mordor.pedidos.PedidoInternacional;
-//import edu.poniperro.mordor.pedidos.PedidoNacional;
+import edu.poniperro.mordor.pedidos.PedidoNacional;
 import edu.poniperro.mordor.pedidos.PedidoPeligrosoOrden;
 //import edu.poniperro.mordor.procesadores.Oficina;
 import edu.poniperro.mordor.tratamientos.TratamientoPedidoInternacional;
@@ -122,15 +122,15 @@ public class TestPedidos {
      * Añade una clase para los pedidos nacionales.
      */
 
-//    @Test
-//    public void test_pedido_nacional_UUDI() {
-//
-//        PedidoInternacional internacional = new PedidoInternacional("Mordor", 10);
-//        assertNotNull(internacional);
-//        PedidoNacional nacional = new PedidoNacional("Gondor", 50);
-//        assertNotNull(nacional);
-//        assertNotEquals(internacional.getId(), nacional.getId());
-//    }
+    @Test
+    public void test_pedido_nacional_UUDI() {
+
+        PedidoInternacional internacional = new PedidoInternacional("Mordor", 10);
+        assertNotNull(internacional);
+        PedidoNacional nacional = new PedidoNacional("Gondor", 50);
+        assertNotNull(nacional);
+        assertNotEquals(internacional.getId(), nacional.getId());
+    }
 
     /**
      * Construye una oficina que procese todo tipo de pedidos.

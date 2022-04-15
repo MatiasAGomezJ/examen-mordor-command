@@ -18,7 +18,7 @@ import edu.poniperro.mordor.interfaces.PedidoPeligroso;
 //import edu.poniperro.mordor.interfaces.Procesador;
 import edu.poniperro.mordor.interfaces.TratamientoPedido;
 import edu.poniperro.mordor.pedidos.PedidoInternacional;
-//import edu.poniperro.mordor.pedidos.PedidoNacional;
+import edu.poniperro.mordor.pedidos.PedidoNacional;
 import edu.poniperro.mordor.pedidos.PedidoPeligrosoOrden;
 //import edu.poniperro.mordor.procesadores.Oficina;
 import edu.poniperro.mordor.tratamientos.TratamientoPedidoInternacional;

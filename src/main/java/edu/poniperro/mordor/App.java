@@ -1,13 +1,13 @@
 package edu.poniperro.mordor;
 
-//import edu.poniperro.mordor.interfaces.Pedido;
-//import edu.poniperro.mordor.interfaces.PedidoPeligroso;
-//import edu.poniperro.mordor.interfaces.TratamientoPedido;
-//import edu.poniperro.mordor.pedidos.PedidoInternacional;
-//import edu.poniperro.mordor.pedidos.PedidoPeligrosoOrden;
+import edu.poniperro.mordor.interfaces.Pedido;
+import edu.poniperro.mordor.interfaces.PedidoPeligroso;
+import edu.poniperro.mordor.interfaces.TratamientoPedido;
+import edu.poniperro.mordor.pedidos.PedidoInternacional;
+import edu.poniperro.mordor.pedidos.PedidoPeligrosoOrden;
 //import edu.poniperro.mordor.procesadores.Oficina;
-//import edu.poniperro.mordor.tratamientos.TratamientoPedidoInternacional;
-//import edu.poniperro.mordor.tratamientos.TratamientoPedidoPeligroso;
+import edu.poniperro.mordor.tratamientos.TratamientoPedidoInternacional;
+import edu.poniperro.mordor.tratamientos.TratamientoPedidoPeligroso;
 
 /**
  * Crea una oficina que procesa pedidos.
@@ -51,26 +51,26 @@ public class App {
 
 //        Oficina oficina = new Oficina();
 
-//        Pedido pedido = new PedidoInternacional("Comarca", 10);
-//        TratamientoPedido tratamientoInt = new TratamientoPedidoInternacional(
-//                (PedidoInternacional) pedido);
+        Pedido pedido = new PedidoInternacional("Comarca", 10);
+        TratamientoPedido tratamientoInt = new TratamientoPedidoInternacional(
+                (PedidoInternacional) pedido);
 
 //        System.out.println(oficina.printarStatus(oficina.procesa(tratamientoInt), pedido));
 
-//        pedido = new PedidoInternacional("Mordor", 10);
-//        tratamientoInt = new TratamientoPedidoInternacional((PedidoInternacional) pedido);
+        pedido = new PedidoInternacional("Mordor", 10);
+        tratamientoInt = new TratamientoPedidoInternacional((PedidoInternacional) pedido);
 
 //        System.out.println(oficina.printarStatus(oficina.procesa(tratamientoInt), pedido));
 
-//        pedido = new PedidoPeligrosoOrden("Cima de los vientos",
-//                "No urgarse en las uñas con este puñal");
-//        TratamientoPedido peligroso = new TratamientoPedidoPeligroso((PedidoPeligroso) pedido);
+        pedido = new PedidoPeligrosoOrden("Cima de los vientos",
+                "No urgarse en las uñas con este puñal");
+        TratamientoPedido peligroso = new TratamientoPedidoPeligroso((PedidoPeligroso) pedido);
 
 //        System.out.println(oficina.printarStatus(oficina.procesa(peligroso), pedido));
 
-//        pedido = new PedidoPeligrosoOrden("Monte del destino",
-//                "No ponerselo en el dedo");
-//        peligroso = new TratamientoPedidoPeligroso((PedidoPeligroso) pedido);
+        pedido = new PedidoPeligrosoOrden("Monte del destino",
+                "No ponerselo en el dedo");
+        peligroso = new TratamientoPedidoPeligroso((PedidoPeligroso) pedido);
 
 //        System.out.println(oficina.printarStatus(oficina.procesa(peligroso), pedido));
 

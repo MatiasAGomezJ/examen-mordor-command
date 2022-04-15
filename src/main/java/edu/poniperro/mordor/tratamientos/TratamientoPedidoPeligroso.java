@@ -13,7 +13,7 @@ public class TratamientoPedidoPeligroso implements TratamientoPedido {
 
     @Override
     public boolean tratar() {
-        return false;
+        return pedido.instrucciones() != "No ponerselo en el dedo";
     }
 
     public PedidoPeligroso getPedido() {
